@@ -1,0 +1,10 @@
+1). Add the dependency on gradle (app level)
+2). Apply Plugin for hilt
+3). Add permission for Internet
+4). Create Package for mainapp and Create MainApp.kt and set main app to manifest file in application tag
+5). Create Package for name network constant and create a file NetworkConstant
+6). Create Model call for response
+7). Create netoworkCall package nad Create ApiService Class and add BASE_URL and some other url
+8). Create NetworkModule and write code for retrofit call
+9). Create Repository package and create DataRepository class
+10). Create a repository module

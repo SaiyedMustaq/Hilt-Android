@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MainFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutMode="clipBounds"
+        android:orientation="vertical"
+        tools:listitem="@layout/row_item_facts"
+        tools:itemCount="10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</FrameLayout>
