@@ -1,82 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="10dp"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="10dp"
-    app:cardPreventCornerOverlap="true"
-    app:cardMaxElevation="10dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
-    android:layout_height="wrap_content">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvId"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:padding="5dp"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/tvTitle"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imagethumbnail"
-        app:layout_constraintTop_toTopOf="@+id/imagethumbnail"
-        tools:text="Id" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imagethumbnail"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Id" />
 
-    <ImageView
-        android:id="@+id/imageUrl"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintCircle="@id/imagethumbnail"
-        app:layout_constraintCircleAngle="130"
-        app:layout_constraintCircleRadius="80dp"
-        app:layout_constraintEnd_toEndOf="@+id/imagethumbnail"
-        app:layout_constraintStart_toEndOf="@+id/imagethumbnail"
-        app:layout_constraintTop_toBottomOf="@+id/imagethumbnail"
-        app:srcCompat="@drawable/ic_launcher_background" />
 
-    <TextView
-        android:id="@+id/tvAlbumId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tvId"
-        app:layout_constraintTop_toBottomOf="@+id/tvId"
-        tools:text="AlbumId" />
+        <TextView
+            android:id="@+id/tvAlbumId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvId"
+            app:layout_constraintStart_toStartOf="@+id/tvId"
+            app:layout_constraintTop_toBottomOf="@+id/tvId"
+            tools:text="AlbumId" />
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/tvId"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvId"
-        app:layout_constraintTop_toTopOf="@+id/tvId" />
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvAlbumId"
+            app:layout_constraintStart_toStartOf="@+id/tvAlbumId"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAlbumId"
+            tools:text="Title" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
