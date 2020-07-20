@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.ListAdapter
 import com.mustaq.hilt_demo.R
 import com.mustaq.hilt_demo.model.DiffUtilsFactsModel
 import com.mustaq.hilt_demo.model.PhotosModel
+import com.mustaq.hilt_demo.model.UserModel
 
-class AdapterFacts : ListAdapter<PhotosModel, FactsViewHolder>(DiffUtilsFactsModel()) {
+class AdapterFacts : ListAdapter<PhotosModel.PhotosModelItem, FactsViewHolder>(DiffUtilsFactsModel()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FactsViewHolder {
         return FactsViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_item_facts, parent, false))
     }
