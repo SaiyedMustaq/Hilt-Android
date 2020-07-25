@@ -42,15 +42,20 @@ class MainFragment : Fragment() {
         responseFromFacts.observe(viewLifecycleOwner, Observer { responseData ->
             when (responseData) {
                 is ResultData.Success -> {
+                    rvFacts.visibility = View.VISIBLE
                     val factsData = responseData.data
                     adapterFactsList.submitList(factsData)
+                    progressBar.visibility = View.GONE
+                    tvLoading.visibility = View.GONE
                 }
                 is ResultData.Failed -> {
                     Toast.makeText(requireContext(), "Something Went Wrong", Toast.LENGTH_SHORT)
                         .show()
                 }
                 is ResultData.Loading -> {
-                    Toast.makeText(requireContext(), "Data Loading", Toast.LENGTH_SHORT).show()
+                    progressBar.visibility = View.VISIBLE
+                    tvLoading.visibility = View.VISIBLE
+                    rvFacts.visibility = View.GONE
                 }
             }
         })
